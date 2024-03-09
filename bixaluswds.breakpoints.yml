@@ -1,0 +1,21 @@
+bixaluswds.mobile:
+  label: USWDS Mobile
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+  group: 'Bixal USWDS'
+bixaluswds.tablet:
+  label: USWDS Tablet
+  mediaQuery: '(min-width: 640px)'
+  weight: 1
+  multipliers:
+    - 1x
+  group: 'Bixal USWDS'
+bixaluswds.desktop:
+  label: USWDS Desktop
+  mediaQuery: '(min-width: 1024px)'
+  weight: 2
+  multipliers:
+    - 1x
+  group: 'Bixal USWDS'

@@ -10,6 +10,9 @@ dependencies:
   - drupal:twig_field_value
   - drupal:uswds_templates
   - drupal:block_content_template
+  - drupal:breakpoint
+  - drupal:responsive_image
+  - drupal:focal_point
 
 regions:
   admin: "Admin"
