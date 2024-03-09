@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: bixal_scaled_sm
+label: 'Bixal: Scaled small (640)'
+effects:
+  d4607d8c-1bb7-44a6-bea8-3e4953d2def5:
+    uuid: d4607d8c-1bb7-44a6-bea8-3e4953d2def5
+    id: image_scale
+    weight: 1
+    data:
+      width: 640
+      height: null
+      upscale: false
