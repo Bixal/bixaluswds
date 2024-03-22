@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: bixal_standard_sm
+label: 'Bixal: Standard small (640x480)'
+effects:
+  4cb8fd11-231f-4ee2-9c06-e39816ff26c2:
+    uuid: 4cb8fd11-231f-4ee2-9c06-e39816ff26c2
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 480
+      crop_type: focal_point

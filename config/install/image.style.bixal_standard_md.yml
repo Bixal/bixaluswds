@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: bixal_standard_md
+label: 'Bixal: Standard medium (960x720)'
+effects:
+  4f67b2ad-a8fe-40ae-a393-2e4f9fa7ff4c:
+    uuid: 4f67b2ad-a8fe-40ae-a393-2e4f9fa7ff4c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 720
+      crop_type: focal_point

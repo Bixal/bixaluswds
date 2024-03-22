@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: bixal_standard_lg
+label: 'Bixal: Standard large (1280x960)'
+effects:
+  dc6c5036-24b2-421f-9e28-3506495c27ef:
+    uuid: dc6c5036-24b2-421f-9e28-3506495c27ef
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1280
+      height: 960
+      crop_type: focal_point

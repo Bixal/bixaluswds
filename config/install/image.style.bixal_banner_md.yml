@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: bixal_banner_md
+label: 'Bixal: Banner medium (960x480)'
+effects:
+  8169038f-d05b-4690-9982-2181ee2cd32e:
+    uuid: 8169038f-d05b-4690-9982-2181ee2cd32e
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 480
+      crop_type: focal_point

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: bixal_square_lg
+label: 'Bixal: Square large (1280x1280)'
+effects:
+  eb889b46-565b-4ae2-ba44-886e461bf29a:
+    uuid: eb889b46-565b-4ae2-ba44-886e461bf29a
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1280
+      height: 1280
+      crop_type: focal_point

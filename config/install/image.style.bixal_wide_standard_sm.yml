@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: bixal_wide_standard_sm
+label: 'Bixal: Wide Standard small (640x360)'
+effects:
+  39a5c052-fa9b-4b51-9f6f-6016e0477f0c:
+    uuid: 39a5c052-fa9b-4b51-9f6f-6016e0477f0c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 360
+      crop_type: focal_point
