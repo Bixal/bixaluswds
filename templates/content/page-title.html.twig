@@ -14,8 +14,6 @@
 #}
 {% set title = drupal_title() %}
 
-{{ title_prefix }}
 {% if title %}
-  <h1>{{ title }}</h1>
+  <h1 class="{{ class_prefix ~ 'page-title' }}">{{ title }}</h1>
 {% endif %}
-{{ title_suffix }}

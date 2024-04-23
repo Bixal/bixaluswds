@@ -68,24 +68,20 @@
  */
 #}
 {% set classes = [
-  'node',
-  'node--type-' ~ node.bundle|clean_class,
-  not node.isPublished() ? 'node--unpublished',
-  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  class_prefix ~ 'node',
+  class_prefix ~ 'node--' ~ node.bundle|clean_class,
+  not node.isPublished() ? class_prefix ~ 'node--unpublished',
+  view_mode ? class_prefix ~ 'node--' ~ view_mode|clean_class,
 ] %}
 
 <article{{ attributes.addClass(classes) }}>
-
-  {{ title_prefix }}
   {% if label and not page %}
-    <h2>
+    <h2 class="{{ class_prefix ~ 'node__heading' }}">
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
     </h2>
   {% endif %}
-  {{ title_suffix }}
 
   {% block content %}
     {{ content }}
   {% endblock %}
-
 </article>

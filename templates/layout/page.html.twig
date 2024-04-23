@@ -67,7 +67,7 @@
 } %}
 
 <div class="usa-overlay"></div>
-<header role="banner" class="usa-header" id="header">
+<header role="banner" class="usa-header {{ class_prefix ~ 'header' }}" id="header">
   {{ page.header }}
 </header>
 
@@ -76,10 +76,10 @@
 {% block main %}
   {% if page.sidebar %}
 
-    <aside id="sidebar" role="complementary">
+    <aside id="sidebar" role="complementary" class="{{ class_prefix ~ 'sidebar' }}">
       {{ page.sidebar }}
     </aside>
-    <main role="main">
+    <main role="main" id="main" class="{{ class_prefix ~ 'main' }}">
       {# link is in html.html.twig #}
       <a id="main-content" tabindex="-1"></a>
       {{ page.content }}
@@ -87,7 +87,7 @@
 
   {% else %}
 
-    <main role="main" id="main">
+    <main role="main" id="main" class="{{ class_prefix ~ 'main' }}">
       {# link is in html.html.twig #}
       <a id="main-content" tabindex="-1"></a>
       {{ page.content }}
@@ -96,7 +96,7 @@
   {% endif %}
 {% endblock %}
 
-<footer class="usa-footer" role="contentinfo">
+<footer class="usa-footer {{ class_prefix ~ 'footer' }}" role="contentinfo">
   {# Footer partial. #}
   {% include '@bixaluswds/_components/uswds/usa-footer.html.twig' with {
     'footer_menu': drupal_entity('block', 'footer_menu'),
