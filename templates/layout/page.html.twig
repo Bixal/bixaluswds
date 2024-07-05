@@ -72,28 +72,29 @@
 </header>
 
 {{ page.admin }}
-
 {% block main %}
-  {% if page.sidebar %}
+  <div class="usa-section grid-container">
+    {% if page.sidebar %}
 
-    <aside id="sidebar" role="complementary" class="{{ class_prefix ~ 'sidebar' }}">
-      {{ page.sidebar }}
-    </aside>
-    <main role="main" id="main" class="{{ class_prefix ~ 'main' }}">
-      {# link is in html.html.twig #}
-      <a id="main-content" tabindex="-1"></a>
-      {{ page.content }}
-    </main>
+      <aside id="sidebar" role="complementary" class="{{ class_prefix ~ 'sidebar' }}">
+        {{ page.sidebar }}
+      </aside>
+      <main role="main" id="main" class="{{ class_prefix ~ 'main' }}">
+        {# link is in html.html.twig #}
+        <a id="main-content" tabindex="-1"></a>
+        {{ page.content }}
+      </main>
 
-  {% else %}
+    {% else %}
 
-    <main role="main" id="main" class="{{ class_prefix ~ 'main' }}">
-      {# link is in html.html.twig #}
-      <a id="main-content" tabindex="-1"></a>
-      {{ page.content }}
-    </main>
+      <main role="main" id="main" class="{{ class_prefix ~ 'main' }}">
+        {# link is in html.html.twig #}
+        <a id="main-content" tabindex="-1"></a>
+        {{ page.content }}
+      </main>
 
-  {% endif %}
+    {% endif %}
+  </div>
 {% endblock %}
 
 <footer class="usa-footer {{ class_prefix ~ 'footer' }}" role="contentinfo">
