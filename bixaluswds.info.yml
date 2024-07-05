@@ -3,7 +3,7 @@ type: theme
 description: "Drupal base theme for use with USWDS. Check the README for further instructions."
 core_version_requirement: "^10"
 base theme: false
-version: '0.0.0'
+version: '1.0.0'
 hidden: true
 dependencies:
   - drupal:twig_tweak
