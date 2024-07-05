@@ -67,27 +67,40 @@
 } %}
 
 <div class="usa-overlay"></div>
-<header role="banner" class="usa-header {{ class_prefix ~ 'header' }}" id="header">
-  {{ page.header }}
+<header role="banner" class="usa-header usa-header--extended {{ class_prefix ~ 'header' }}" id="header">
+  <div class="usa-navbar">
+
+    {# Site branding component #}
+    {{ drupal_entity('block', 'bixaluswds_sitebranding') }}
+
+    <button type="button" class="usa-menu-btn" data-test="mobileBtn">{{ 'Menu' | t }}</button>
+
+  </div>
+
+  {# Main navigation component #}
+  {{ drupal_entity('block', 'bixaluswds_main_menu') }}
 </header>
 
 {{ page.admin }}
+
 {% block main %}
   <div class="usa-section grid-container">
     {% if page.sidebar %}
 
-      <aside id="sidebar" role="complementary" class="{{ class_prefix ~ 'sidebar' }}">
-        {{ page.sidebar }}
-      </aside>
-      <main role="main" id="main" class="{{ class_prefix ~ 'main' }}">
-        {# link is in html.html.twig #}
-        <a id="main-content" tabindex="-1"></a>
-        {{ page.content }}
-      </main>
+      <div class="grid-row">
+        <aside id="sidebar" role="complementary" class="display-none desktop:display-block desktop:grid-col-3 {{ class_prefix ~ 'sidebar' }}">
+          {{ page.sidebar }}
+        </aside>
+        <main role="main" id="main" class="desktop:grid-col-8 desktop:grid-offset-1 {{ class_prefix ~ 'main' }}">
+          {# link is in html.html.twig #}
+          <a id="main-content" tabindex="-1"></a>
+          {{ page.content }}
+        </main>
+      </div>
 
     {% else %}
 
-      <main role="main" id="main" class="{{ class_prefix ~ 'main' }}">
+      <main role="main" id="main" class="desktop:grid-col-8 {{ class_prefix ~ 'main' }}">
         {# link is in html.html.twig #}
         <a id="main-content" tabindex="-1"></a>
         {{ page.content }}
