@@ -32,10 +32,4 @@ lando php web/core/scripts/drupal generate-theme --starterkit starter_theme my_n
 lando drush cr
 ```
 
-## Remove these lines from your custom theme info file
-```
-hidden: true
-starterkit: true
-```
-
 ## Install the theme dependencies and set your custom theme as the default
