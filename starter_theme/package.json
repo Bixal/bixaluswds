@@ -4,13 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx gulp",
-    "postinstall": "npx gulp"
+    "postinstall": "npx gulp build",
+    "build": "npx gulp build",
+    "dev": "npx gulp"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@uswds/compile": "^1.0.0",
-    "@uswds/uswds": "^3.6.1"
+    "@uswds/compile": "^1.1.0",
+    "@uswds/uswds": "^3.8.1",
+    "gulp": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "uglify-es": "^3.3.9"
+  },
+  "overrides": {
+    "glob-parent": "6.0.2",
+    "postcss": "^8.4.31"
   }
 }

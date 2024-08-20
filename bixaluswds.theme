@@ -6,6 +6,7 @@
  */
 
 require_once dirname(__FILE__) . '/preprocess/global.inc';
+require_once dirname(__FILE__) . '/preprocess/block.inc';
 require_once dirname(__FILE__) . '/preprocess/form.inc';
 require_once dirname(__FILE__) . '/preprocess/navigation.inc';
 require_once dirname(__FILE__) . '/preprocess/taxonomy.inc';
