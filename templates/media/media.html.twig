@@ -16,18 +16,14 @@
 #}
 
 {% set classes = [
-  'media',
-  'media--type-' ~ media.bundle()|clean_class,
-  not media.isPublished() ? 'media--unpublished',
-  view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
+  class_prefix ~ 'media',
+  class_prefix ~ 'media--' ~ media.bundle()|clean_class,
+  not media.isPublished() ? class_prefix ~ 'media--unpublished',
+  view_mode ? class_prefix ~ 'media--' ~ view_mode|clean_class,
 ] %}
 
 {% block content %}
   <div{{ attributes.addClass(classes) }}>
-
-    {{ title_suffix.contextual_links }}
-
     {{ content }}
-
   </div>
 {% endblock %}

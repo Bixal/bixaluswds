@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.bixal_square_lg
+    - image.style.bixal_square_sm
+    - image.style.bixal_square_md
+  theme:
+    - bixaluswds
+id: bixal_square
+label: 'Bixal: Square'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: bixal_square_lg
+    breakpoint_id: bixaluswds.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: bixal_square_md
+    breakpoint_id: bixaluswds.tablet
+    multiplier: 1x
+breakpoint_group: 'Bixal USWDS'
+fallback_image_style: bixal_square_sm

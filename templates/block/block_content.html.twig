@@ -10,19 +10,14 @@
 #}
 {%
   set classes = [
-  'block-content',
-  'block-content--type-' ~ bundle|clean_class,
-  'block-content--view-mode-' ~ view_mode|clean_class
+  class_prefix ~ 'block-content',
+  class_prefix ~ 'block-content--' ~ bundle|clean_class,
+  class_prefix ~ 'block-content--' ~ view_mode|clean_class
 ]
 %}
 
 <div{{ attributes.addClass(classes) }}>
-
-  {{ title_prefix }}
-  {{ title_suffix }}
-
   {% block content %}
     {{ content }}
   {% endblock %}
-
 </div>

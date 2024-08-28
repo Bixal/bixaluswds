@@ -14,7 +14,6 @@ NVM: https://github.com/nvm-sh/nvm
 ```
 nvm use
 npm install
-npm run build
 ```
 
 ## npm commands

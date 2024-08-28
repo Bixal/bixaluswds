@@ -1,0 +1,108 @@
+{#
+/**
+ * @file
+ * Bixal USWDS implementation for main navigation
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ *
+ * @ingroup themeable
+ */
+#}
+{% import _self as menus %}
+
+{#
+We call a macro which calls itself to render the full tree.
+@see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{% set attributes = attributes.addClass('menu') %}
+<nav aria-label="{{ 'Primary' | t }}" class="usa-nav">
+  <div class="usa-nav__inner">
+    <div class="grid-container usa-nav__close-container">
+      <button type="button" class="usa-nav__close">{{ 'Close' | t }}</button>
+    </div>
+    {{ menus.menu_links(items, attributes, 0, 'mega-nav-section-') }}
+  </div>
+</nav>
+
+{% macro menu_links(items, attributes, menu_level, aria_id) %}
+  {% import _self as menus %}
+  {% if items %}
+    {# Primary level menu structure. #}
+    {% if menu_level == 0 %}
+      <ul class="usa-nav__primary usa-accordion">
+        {% for item in items %}
+          {% set aria_id = aria_id ~ loop.index | clean_id %}
+          <li class="usa-nav__primary-item">
+            {% if item.below %}
+            <button
+              type="button"
+              class="usa-accordion__button usa-nav__link {{ item.in_active_trail ? 'usa-current' }}"
+              aria-expanded="false"
+              aria-controls="{{ aria_id }}"
+            >
+              <span>{{ item.title }}</span>
+            </button>
+            <div
+              id="{{ aria_id }}"
+              class="usa-nav__submenu"
+              hidden
+            >
+              <ul class="usa-nav__submenu-list">
+                {% set link_classes = [
+                  'usa-nav__link',
+                  'usa-nav__link--parent',
+                  item.in_active_trail ? 'usa-current'
+                ] %}
+                <li class="usa-nav__submenu-item">{{ link(item.title, item.url, {'class': link_classes}) }}</li>
+                {{ menus.menu_links(item.below, attributes, menu_level + 1, aria_id) }}
+
+                {% else %}
+                  {% if item.url.isRouted() and item.url.routeName == '<nolink>' %}
+                    <button
+                      type="button"
+                      class="usa-nav__link"
+                    >
+                      <span>{{ item.title }}</span>
+                    </button>
+                  {% else %}
+                    {% set link_classes = [
+                      'usa-nav__link',
+                      item.in_active_trail ? 'usa-current'
+                    ] %}
+                    {{ link(item.title, item.url, {'class': link_classes}) }}
+                  {% endif %}
+                {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      {# Secondary level menu structure. #}
+    {% elseif menu_level == 1 %}
+      {% for item in items %}
+        <li class="usa-nav__submenu-item">
+          {% if item.url.routeName != '<nolink>' %}
+            {{ link(item.title, item.url) }}
+          {% else %}
+            <span>{{ item.title }}</span>
+          {% endif %}
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+      </div>
+    {% endif %}
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: bixal_social_standard
+label: 'Bixal: Social Standard (1200x600)'
+effects:
+  e20979d8-82fd-433a-b785-cab50d36713f:
+    uuid: e20979d8-82fd-433a-b785-cab50d36713f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 600
+      crop_type: focal_point

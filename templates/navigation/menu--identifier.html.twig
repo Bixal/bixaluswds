@@ -22,7 +22,7 @@
 #}
 {% import _self as menus %}
 
-<nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="{{ 'Important links' | t }}">
+<nav class="usa-identifier__section usa-identifier__section--required-links {{ class_prefix ~ 'nav--' ~ menu_name|clean_class }}" aria-label="{{ 'Important links' | t }}">
   <div class="usa-identifier__container">
     {{ menus.menu_links(items, attributes, 0) }}
   </div>

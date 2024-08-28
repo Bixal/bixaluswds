@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: bixal_scaled_lg
+label: 'Bixal: Scaled large (1280)'
+effects:
+  a0962518-9cc3-414e-9225-1c691f797150:
+    uuid: a0962518-9cc3-414e-9225-1c691f797150
+    id: image_scale
+    weight: 1
+    data:
+      width: 1280
+      height: null
+      upscale: false

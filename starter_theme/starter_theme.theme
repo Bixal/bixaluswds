@@ -9,5 +9,5 @@
  * Implements hook_preprocess().
  */
 function starter_theme_preprocess(&$variables) {
-  $variables['uswds_img_path'] = '/themes/custom/starter_theme/dist/img';
+  $variables['uswds_img_path'] = '/themes/custom/starter_theme/dist/assets/img';
 }

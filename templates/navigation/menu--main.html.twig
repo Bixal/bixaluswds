@@ -22,7 +22,7 @@
 #}
 {% import _self as menus %}
 
-<nav aria-label="{{ 'Primary navigation' | t }}" class="usa-nav">
+<nav class="usa-nav {{ class_prefix ~ 'nav--' ~ menu_name|clean_class }}" aria-label="{{ 'Primary navigation' | t }}">
   <button type="button" class="usa-nav__close">
     <img src="{{ uswds_img_path }}/usa-icons/close.svg" role="img" alt="{{ 'Close' | t }}"/>
   </button>

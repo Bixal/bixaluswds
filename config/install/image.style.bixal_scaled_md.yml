@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: bixal_scaled_md
+label: 'Bixal: Scaled medium (960)'
+effects:
+  89836321-33a7-46d3-9328-ef2a0061c544:
+    uuid: 89836321-33a7-46d3-9328-ef2a0061c544
+    id: image_scale
+    weight: 1
+    data:
+      width: 960
+      height: null
+      upscale: false

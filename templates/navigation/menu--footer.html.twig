@@ -22,7 +22,7 @@
 #}
 {% import _self as menus %}
 
-<nav class="usa-footer__nav" aria-label="{{ 'Footer navigation' | t }}">
+<nav class="usa-footer__nav {{ class_prefix ~ 'nav--' ~ menu_name|clean_class }}" aria-label="{{ 'Footer navigation' | t }}">
   {{ menus.menu_links(items, attributes, 0) }}
 </nav>
 

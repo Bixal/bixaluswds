@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: bixal_banner_lg
+label: 'Bixal: Banner large (1280x640)'
+effects:
+  4d7960b9-77d5-4377-a8da-34c652f632c2:
+    uuid: 4d7960b9-77d5-4377-a8da-34c652f632c2
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1280
+      height: 640
+      crop_type: focal_point
