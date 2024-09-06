@@ -54,6 +54,9 @@ Create a new feature branch
 
 ```
 git checkout -b feature/ISSUE_NO-short-descriptive-label
+
+# Example
+feature/23-gh-issue-templates
 ```
 
 ### Create a pull request
