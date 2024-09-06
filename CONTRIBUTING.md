@@ -35,7 +35,7 @@ lando drush theme:install my_new_theme
 
 ## 3. Work on an issue
 
-### Create a feature branch off `dev` for development
+### Create a feature branch off `main` for development
 
 Navigate into the base theme directory
 
@@ -43,10 +43,10 @@ Navigate into the base theme directory
 cd web/themes/custom/bixaluswds`
 ```
 
-Checkout the `dev` branch and pull changes
+Checkout the `main` branch and pull changes
 
 ```
-git checkout dev
+git checkout main
 git pull origin
 ```
 
@@ -67,5 +67,5 @@ Commit your file modifications and push into your fork
 git push fork branch-name
 ```
 
-Visit https://github.com/Bixal/bixaluswds/compare and create a pull request from your fork branch (source) to `Bixal:dev` (target).
+Visit https://github.com/Bixal/bixaluswds/compare and create a pull request from your fork branch (source) to `Bixal:main` (target).
 Follow the PR template instructions to complete the PR. Then update the GitHub issue with a note that you have a PR ready for review.
