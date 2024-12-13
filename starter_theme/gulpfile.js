@@ -66,6 +66,7 @@ function watchCompFiles() {
  */
 // Use version 3.
 uswds.settings.version = 3;
+uswds.settings.compile.sassSourcemaps = true;
 
 /**
  * Path settings
