@@ -27,6 +27,7 @@ The theme dependencies are already met in the Drupal standard installation.
 
 ```
 lando drush theme:install my_new_theme
+lando drush config-set system.theme default my_new_theme
 ```
 
 ## 3. Work on an issue

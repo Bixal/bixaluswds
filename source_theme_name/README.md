@@ -7,11 +7,12 @@ NVM: https://github.com/nvm-sh/nvm
 
 ## Getting started
 
-### Was this theme just created? set as the default theme otherwise continue to next steps.
+### Was this theme just generated? set as the default theme, otherwise continue to next step.
 In this example the theme machine name is `my_new_theme`.
 The theme dependencies are already met in the Drupal standard installation.
 ```
 lando drush theme:install my_new_theme
+lando drush config-set system.theme default my_new_theme
 ```
 
 ### Installing the node package dependencies and running a build.
