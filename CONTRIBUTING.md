@@ -10,18 +10,14 @@
 ### Initialize child theme using drupal theme generate function
 
 Determine what theme machine name you want to use in this example we are using `my_new_theme`.
-First create a `custom` directory in `themes` directory if there isn't one: `mkdir web/themes/custom`.
 
 ```
-lando php web/core/scripts/drupal generate-theme --starterkit starter_theme my_new_theme --path themes/custom
+# First create a `custom` directory in `themes` directory.
+mkdir -p web/themes/custom
+
+# Generate the theme using Drupal's built in theme generation and starterkit from Bixal USWDS theme.
+lando php web/core/scripts/drupal generate-theme --starterkit source_theme_name my_new_theme --path themes/custom
 lando drush cr
-```
-
-### Remove these lines from your custom theme .info.yml file
-
-```
-hidden: true
-starterkit: true
 ```
 
 ### Install and set your custom theme as the default
