@@ -1,7 +1,7 @@
 base:
   dependencies:
-    - starter_theme/uswds
-    - starter_theme/external_links
+    - source_theme_name/uswds
+    - source_theme_name/external_links
 
 uswds:
   css:

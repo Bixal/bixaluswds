@@ -1,8 +1,5 @@
 # Bixal USWDS Drupal theme
 
-@TODO Modify this starter_theme to work with core function to generate theme
-https://www.drupal.org/docs/core-modules-and-themes/core-themes/starterkit-theme#s-custom-starterkit-theme
-
 ## Requirements
 
 Node: https://nodejs.org/en/
@@ -10,7 +7,14 @@ NVM: https://github.com/nvm-sh/nvm
 
 ## Getting started
 
-### Installing the node package dependencies and running a build
+### Was this theme just created? set as the default theme otherwise continue to next steps.
+In this example the theme machine name is `my_new_theme`.
+The theme dependencies are already met in the Drupal standard installation.
+```
+lando drush theme:install my_new_theme
+```
+
+### Installing the node package dependencies and running a build.
 ```
 nvm use
 npm install
@@ -24,7 +28,7 @@ npm install
 npm run dev
 ```
 
-### Building the assets for deployment
+### Building the assets for deployment.
 ```
 npm run build
 ```

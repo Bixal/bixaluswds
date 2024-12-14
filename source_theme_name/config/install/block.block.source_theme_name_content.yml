@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - starter_theme
-id: starter_theme_content
-theme: starter_theme
+    - source_theme_name
+id: source_theme_name_content
+theme: source_theme_name
 region: content
 weight: -3
 provider: null
