@@ -89,6 +89,11 @@ uswds.paths.src.projectSass = './src/sass';
 // Various compile functions.
 exports.build = series(uswds.copyAssets, buildJS, uswds.compile);
 exports.compile = uswds.compile;
-exports.default = exports.watch = parallel(watchCompFiles, uswds.watch, watchJSFiles);
+exports.buildCompStyles = buildCompStyles;
+exports.default = exports.watch = parallel(
+  watchCompFiles,
+  uswds.watch,
+  watchJSFiles
+);
 exports.update = uswds.updateUswds;
 exports.copyAssets = uswds.copyAssets;
