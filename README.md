@@ -1,9 +1,15 @@
 # Bixal USWDS Drupal base theme
 
+![A screenshot of multiple devices using the USWDS theme](screenshot.png)
+
+## Create a child theme
+
 @TODO document the process to create a new child theme from the starter_theme.
 
 ## Install base theme by modifying composer.json file
+
 Add bixal/bixaluswds to `repositories` object.
+
 ```
 {
     "type": "package",
@@ -19,14 +25,18 @@ Add bixal/bixaluswds to `repositories` object.
     }
 }
 ```
+
 Then run
+
 ```
 lando composer require "bixal/bixaluswds"
 ```
 
 ## Initialize child theme using drupal theme generate function
+
 Determine what theme name you want to use in this example we are using `my_new_theme`.
 First create a `custom` directory in `themes` directory if there isn't one `mkdir web/themes/custom`.
+
 ```
 lando php web/core/scripts/drupal generate-theme --starterkit starter_theme my_new_theme --path themes/custom
 lando drush cr
