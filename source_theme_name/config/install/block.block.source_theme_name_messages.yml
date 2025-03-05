@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - starter_theme
-id: starter_theme_messages
-theme: starter_theme
+    - source_theme_name
+id: source_theme_name_messages
+theme: source_theme_name
 region: admin
 weight: -3
 provider: null

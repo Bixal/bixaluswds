@@ -1,9 +1,12 @@
 # Bixal USWDS Drupal base theme
 
-@TODO document the process to create a new child theme from the starter_theme.
+## Introduction
+Bixal's USWDS Drupal base theme is expected to be installed and not modified in a project. It includes a baseline of functions, configuration and templates for new projects. The base theme also includes a starterkit for generating a custom theme per project.
 
-## Install base theme by modifying composer.json file
-Add bixal/bixaluswds to `repositories` object.
+**\*\*WARNING!\*\*: DO NOT clone** this theme into your project codebase! If you plan to contribute follow the instructions instead written in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## 1. Install base theme by modifying composer.json file.
+To configure the installation of the base theme in the contrib themes directory add bixal/bixaluswds to `repositories` object in `composer.json`.
 ```
 {
     "type": "package",
@@ -19,17 +22,21 @@ Add bixal/bixaluswds to `repositories` object.
     }
 }
 ```
-Then run
+Then run this to install.
 ```
 lando composer require "bixal/bixaluswds"
 ```
 
-## Initialize child theme using drupal theme generate function
-Determine what theme name you want to use in this example we are using `my_new_theme`.
-First create a `custom` directory in `themes` directory if there isn't one `mkdir web/themes/custom`.
+## 2. Initialize child theme using drupal theme generate function.
+Determine what theme name you want to use. In this example we are using `my_new_theme`.
 ```
-lando php web/core/scripts/drupal generate-theme --starterkit starter_theme my_new_theme --path themes/custom
+# First create a `custom` directory in `themes` directory.
+mkdir -p web/themes/custom
+
+# Generate the theme using Drupal's built in theme generation and starterkit from Bixal USWDS theme.
+lando php web/core/scripts/drupal generate-theme --starterkit source_theme_name my_new_theme --path themes/custom
 lando drush cr
 ```
 
-## Install the theme dependencies and set your custom theme as the default
+## 3. Install the theme dependencies and set your custom theme as the default.
+Follow instructions found in your new theme's README file to install dependencies and set your theme as the default.

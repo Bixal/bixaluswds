@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - starter_theme
-id: starter_theme_primary_local_tasks
-theme: starter_theme
+    - source_theme_name
+id: source_theme_name_primary_local_tasks
+theme: source_theme_name
 region: admin
 weight: -4
 provider: null

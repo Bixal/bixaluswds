@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - starter_theme
+    - source_theme_name
 id: bixaluswds_sitebranding
-theme: starter_theme
+theme: source_theme_name
 region: header
 weight: -2
 provider: null

@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theme templates.
+ */
+
+/**
+ * Implements hook_preprocess().
+ */
+function source_theme_name_preprocess(&$variables) {
+  $variables['uswds_img_path'] = '/themes/custom/source_theme_name/dist/assets/img';
+}

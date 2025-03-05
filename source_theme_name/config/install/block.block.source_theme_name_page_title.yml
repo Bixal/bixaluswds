@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - starter_theme
-id: starter_theme_page_title
-theme: starter_theme
+    - source_theme_name
+id: source_theme_name_page_title
+theme: source_theme_name
 region: content
 weight: -4
 provider: null

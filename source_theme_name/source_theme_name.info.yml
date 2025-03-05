@@ -1,13 +1,14 @@
-name: Bixal USWDS starter theme
+name: Bixal USWDS source theme
 type: theme
 description: "Drupal theme for use with USWDS."
 core_version_requirement: "^10"
 base theme: bixaluswds
 version: '0.0.0'
 hidden: true
+starterkit: true
 
 libraries:
-  - starter_theme/base
+  - source_theme_name/base
 
 regions:
   admin: "Admin"
